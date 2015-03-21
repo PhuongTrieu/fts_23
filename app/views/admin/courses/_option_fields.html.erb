@@ -1,8 +1,8 @@
 <div class="option-fields">
   <p>
     <%= f.label :content, "Option" %>
-    <%= link_to_remove_fields "<span class=\"glyphicon glyphicon glyphicon-trash\" aria-hidden=\"true\"></span>".html_safe, f, "remove_option_fields(this)" %>
+    <%= link_to_remove_fields "<span class=\"glyphicon glyphicon glyphicon-trash\" aria-hidden=\"true\"></span>".html_safe, f, "remove_fields(this, \".option-fields\")" %>
     <%= f.text_field :content, size: 10 %>
-    <%= f.check_box :correct, onchange: "check_only_one_checkbox()" %>
+    <%= f.check_box :correct, onclick: "check_only_one_checkbox(this)" %>
   </p>
 </div>

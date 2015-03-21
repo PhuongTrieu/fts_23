@@ -3,7 +3,7 @@
     <%= form_for([:admin, @course]) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
         <p>
-          <%= f.label :name %><br />
+          <%= f.label :name, "Name of course" %><br />
           <%= f.text_field :name %>
         </p>
         <%= f.fields_for :questions do |builder| %>

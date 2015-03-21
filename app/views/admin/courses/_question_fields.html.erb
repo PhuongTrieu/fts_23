@@ -1,10 +1,11 @@
 <div class="fields">
   <p>
     <%= f.label :content, "Question" %>
-    <%= link_to_remove_fields "<span class=\"glyphicon glyphicon glyphicon-trash\" aria-hidden=\"true\"></span>".html_safe, f, "remove_fields(this)" %><br />
+    <%= link_to_remove_fields "<span class=\"glyphicon glyphicon glyphicon-trash\" aria-hidden=\"true\"></span>".html_safe, f, "remove_fields(this, \".fields\")" %><br />
     <%= f.text_area :content, rows: 2 %>
   </p>
   <%= f.fields_for :options do |builder| %>
     <%= render 'option_fields', f: builder %>
   <% end %>
+  <p class="add-option-button"><%= link_to_add_fields "Add Options", f, :options %></p>
 </div>
